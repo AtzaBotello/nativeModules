@@ -31,6 +31,14 @@ const BatteryStatus = () => {
           console.error(error);
         });
     
+        const subscription = onBatteryLevelChange(({ level }) => {
+          setBatteryLevel(level);
+          if (level < 20) {
+            Alert.alert('Low Battery', 'Battery level is below 20%!');
+          }
+        });
+    
+        return () => subscription.remove();
       }, []);
 
 
