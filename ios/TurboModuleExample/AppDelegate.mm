@@ -2,6 +2,9 @@
 
 #import <React/RCTBundleURLProvider.h>
 
+#import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
